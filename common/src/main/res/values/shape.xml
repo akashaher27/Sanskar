@@ -32,5 +32,8 @@
         <item name="cornerSize">5dp</item>
     </style>
 
+    //Background view
+    <style name="ShapeAppearance_BackgroundView" parent="ShapeAppearance.App.LargeComponent"></style>
+
 
 </resources>
