@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BaseProject</string>
+
+    <!-- form -->
+    <string name="title_toolbar">Form</string>
+
+    <!-- upload choice -->
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="file">File</string>
+    <string name="drive">Drive</string>
+
+    <!--bottom sheet title-->
+    <string name="bottomSheet_title_upload">Upload</string>
+
+</resources>

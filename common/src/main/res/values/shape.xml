@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/radius_smallComponent</item>
+        <item name="cornerSize">@dimen/corner_smallComponent</item>
+    </style>
+
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/radius_mediumComponent</item>
+        <item name="cornerSize">@dimen/corner_mediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/radius_largeComponent</item>
+        <item name="cornerSize">@dimen/corner_largeComponent</item>
+    </style>
+
+
+    //bottomSheet
+    <style name="ShapeAppearance.bottomSheet" parent="ShapeAppearance.App.LargeComponent"></style>
+
+    //Date Picker
+    <style name="ShapeAppearance_DatePicker" parent="ShapeAppearance.App.MediumComponent"></style>
+
+    <style name="ShapeAppearance_Outline_Box" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+
+
+</resources>

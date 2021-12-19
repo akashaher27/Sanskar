@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_tiny">2dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_extraLarge">20dp</dimen>
+    <dimen name="padding_huge">25dp</dimen>
+
+    <dimen name="margin_tiny">8dp</dimen>
+    <dimen name="margin_extraSmall">12dp</dimen>
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_normal">22dp</dimen>
+    <dimen name="margin_medium">28dp</dimen>
+    <dimen name="margin_large">35dp</dimen>
+    <dimen name="margin_extraLarge">42dp</dimen>
+    <dimen name="margin_huge">55dp</dimen>
+
+
+    <dimen name="size_toolbar_title">20sp</dimen>
+    <dimen name="size_header">24sp</dimen>
+    <dimen name="size_title">16sp</dimen>
+    <dimen name="size_subtitle">12sp</dimen>
+    <dimen name="size_body">14sp</dimen>
+    <dimen name="size_caption">12sp</dimen>
+    <dimen name="size_overline">10sp</dimen>
+    <dimen name="size_button_title">16sp</dimen>
+
+    <dimen name="radius_largeComponent">16dp</dimen>
+    <dimen name="radius_mediumComponent">12dp</dimen>
+    <dimen name="radius_smallComponent">8dp</dimen>
+
+    <dimen name="corner_largeComponent">16dp</dimen>
+    <dimen name="corner_mediumComponent">12dp</dimen>
+    <dimen name="corner_smallComponent">8dp</dimen>
+
+    <dimen name="height_appbar">?attr/actionBarSize</dimen>
+
+</resources>

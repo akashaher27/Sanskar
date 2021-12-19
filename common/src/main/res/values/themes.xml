@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="base_material_theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/deep_purple</item>
+        <item name="colorPrimaryVariant">@color/deep_purple_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/light_green</item>
+        <item name="colorSecondaryVariant">@color/light_green_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorError">@color/red_error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:colorBackground">@color/grey_100</item>
+        <item name="colorOnBackground">@color/black</item>
+        <item name="toolbarStyle">@style/Style_Toolbar_Standard</item>
+        <item name="materialCalendarTheme">@style/Theme_DatePicker</item>
+    </style>
+
+
+
+    <!--calender-->
+    <style name="Theme_DatePicker" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="shapeAppearanceMediumComponent"> @style/ShapeAppearance_DatePicker</item>
+        <item name="textInputStyle">@style/Style_TextInputLayout_DateInput</item>
+    </style>
+</resources>
