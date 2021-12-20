@@ -1,5 +1,7 @@
 package com.example.common.util
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.net.Uri
 import android.provider.OpenableColumns
@@ -38,6 +40,13 @@ fun getFileDetail(context: Context, uri: Uri): FileDetail {
     return FileDetail(name, size, uri)
 }
 
-fun toMegaByte(byte: Long):Float {
-        return (byte/(1024*1024)).toFloat()
+fun toMegaByte(byte: Long): Float {
+    return (byte / (1024 * 1024)).toFloat()
+}
+
+fun Context.copyTextToClipboard(title: String, value: String) {
+    val clipboard: ClipboardManager =
+        getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+    val clip = ClipData.newPlainText(title, value)
+    clipboard.setPrimaryClip(clip)
 }

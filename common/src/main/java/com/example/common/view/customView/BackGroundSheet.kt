@@ -44,4 +44,8 @@ class BackGroundSheet(context: Context, attributes: AttributeSet) :
         shapeAppearanceModel = shapeModel
     }
 
+    fun getTitle():String{
+        return binding?.tvTitle?.text.toString()
+    }
+
 }
