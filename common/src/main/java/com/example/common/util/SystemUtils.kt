@@ -45,11 +45,16 @@ fun toMegaByte(byte: Long): Float {
     return (byte / (1024 * 1024)).toFloat()
 }
 
-fun Context.copyTextToClipboard(title: String, value: String) {
-    val clipboard: ClipboardManager =
-        getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    val clip = ClipData.newPlainText(title, value)
-    clipboard.setPrimaryClip(clip)
+fun Context.copyTextToClipboard(title: String, value: String): Boolean {
+    return try {
+        val clipboard: ClipboardManager =
+            getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clip = ClipData.newPlainText(title, value)
+        clipboard.setPrimaryClip(clip)
+        true
+    } catch (e: Exception) {
+        false
+    }
 }
 
 fun isDeviceSDKGreaterThan(sdkInt: Int): Boolean = Build.VERSION.SDK_INT > sdkInt

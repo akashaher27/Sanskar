@@ -53,10 +53,7 @@ class SuvichaarActivity() : PostLoginActivity() {
             saveImageToGallery()
         }
         binding?.copy?.setOnClickListener {
-            val value = binding?.background?.getTitle()
-            value?.let {
-                copyTextToClipboard(it, it)
-            }
+            copySuvichaar()
         }
         binding?.edit?.setOnClickListener { }
         binding?.share?.setOnClickListener { }
@@ -72,6 +69,15 @@ class SuvichaarActivity() : PostLoginActivity() {
             )
         ) {
             showToast(getString(R.string.msg_save_image))
+        }
+    }
+
+    private fun copySuvichaar(){
+        val value = binding?.background?.getTitle()
+        value?.let {
+            if (copyTextToClipboard(it, it)){
+                showToast(getString(R.string.msg_copy_image))
+            }
         }
     }
 }

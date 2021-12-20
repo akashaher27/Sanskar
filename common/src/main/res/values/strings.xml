@@ -19,6 +19,7 @@
 
     <!-- -->
     <string name="msg_save_image">Image Saved Successfully.</string>
+    <string name="msg_copy_image">Image copied Successfully.</string>
 
     <!--bottom sheet title-->
     <string name="bottomSheet_title_upload">Upload</string>
