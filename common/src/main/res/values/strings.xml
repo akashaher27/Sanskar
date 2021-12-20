@@ -17,6 +17,9 @@
     <string name="share">Share</string>
     <string name="copy">Copy</string>
 
+    <!-- -->
+    <string name="msg_save_image">Image Saved Successfully.</string>
+
     <!--bottom sheet title-->
     <string name="bottomSheet_title_upload">Upload</string>
 

@@ -46,7 +46,7 @@
             app:title="@string/copy" />
 
         <com.example.common.view.customView.CircularImageTitleView
-            android:id="@+id/file"
+            android:id="@+id/edit"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="top|center"
@@ -54,7 +54,7 @@
             app:title="@string/edit" />
 
         <com.example.common.view.customView.CircularImageTitleView
-            android:id="@+id/file2"
+            android:id="@+id/share"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="top|center"

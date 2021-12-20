@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.net.Uri
+import android.os.Build
 import android.provider.OpenableColumns
 import androidx.core.content.FileProvider
 import com.example.common.model.FileDetail
@@ -50,3 +51,5 @@ fun Context.copyTextToClipboard(title: String, value: String) {
     val clip = ClipData.newPlainText(title, value)
     clipboard.setPrimaryClip(clip)
 }
+
+fun isDeviceSDKGreaterThan(sdkInt: Int): Boolean = Build.VERSION.SDK_INT > sdkInt
