@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <com.example.common.view.ImageTitleView
+        <com.example.common.view.customView.ImageTitleView
             android:id="@+id/camera"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -39,7 +39,7 @@
             app:title="@string/camera"
             app:icon="@drawable/ic_baseline_photo_camera_24"/>
 
-        <com.example.common.view.ImageTitleView
+        <com.example.common.view.customView.ImageTitleView
             android:id="@+id/gallery"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -47,7 +47,7 @@
             app:icon="@drawable/ic_baseline_collections_24"
             app:title="@string/gallery" />
 
-        <com.example.common.view.ImageTitleView
+        <com.example.common.view.customView.ImageTitleView
             android:id="@+id/file"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
@@ -55,7 +55,7 @@
             app:icon="@drawable/ic_baseline_folder_24"
             app:title="@string/file" />
 
-        <com.example.common.view.ImageTitleView
+        <com.example.common.view.customView.ImageTitleView
             android:id="@+id/drive"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"

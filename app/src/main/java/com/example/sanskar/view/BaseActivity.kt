@@ -10,11 +10,7 @@ abstract class BaseActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setLayoutId()?.let {
-            setContentView(it)
-        }
 
     }
 
-    abstract fun setLayoutId(): Int?
 }

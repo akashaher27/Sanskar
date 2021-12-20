@@ -10,6 +10,13 @@
     <string name="file">File</string>
     <string name="drive">Drive</string>
 
+
+    <!-- action-->
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="copy">Copy</string>
+
     <!--bottom sheet title-->
     <string name="bottomSheet_title_upload">Upload</string>
 

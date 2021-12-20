@@ -27,9 +27,16 @@
     //Date Picker
     <style name="ShapeAppearance_DatePicker" parent="ShapeAppearance.App.MediumComponent"></style>
 
+
+    //option shape
     <style name="ShapeAppearance_Outline_Box" >
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">5dp</item>
+    </style>
+
+    <style name="ShapeAppearance_Circle" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
     //Background view

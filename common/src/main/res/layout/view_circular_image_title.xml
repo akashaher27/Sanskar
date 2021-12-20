@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivIcon"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/deep_purple_50"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="@dimen/padding_tiny"
+        android:layout_margin="@dimen/margin_tiny"
+        app:contentPadding="8dp"
+        android:background="@color/deep_purple_50"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance_Circle" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_subtitle"
+        android:layout_gravity="center"
+        android:textColor="@color/black_600"
+        android:text="@string/app_name"/>
+
+</LinearLayout>
