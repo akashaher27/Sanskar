@@ -28,7 +28,6 @@ class BackGroundSheet(context: Context, attributes: AttributeSet) :
     }
 
     private fun populateView() {
-        changeShape()
         changeBackgroundView()
     }
 

@@ -3,11 +3,13 @@
     <!--Toolbar Style-->
 
     //Standard
+
     <style name="Style_Toolbar_Standard" parent="Widget.MaterialComponents.Toolbar.Primary">
         <item name="materialThemeOverlay">@style/ThemeOverlay_Toolbar_Standard</item>
         <item name="titleTextAppearance">@style/TextAppearance_Title_Toolbar</item>
         <item name="subtitleTextAppearance">@style/TextAppearance_Subtitle_Toolbar</item>
     </style>
+
     <style name="ThemeOverlay_Toolbar_Standard">
         <item name="colorPrimary">@color/deep_purple</item>
         <item name="colorPrimaryVariant">@color/deep_purple_dark</item>
@@ -15,25 +17,30 @@
     </style>
 
     //Transparent
+
     <style name="Style_Toolbar_Transparent" parent="Widget.MaterialComponents.Toolbar.Primary">
         <item name="materialThemeOverlay">@style/ThemeOverlay_Toolbar_Transparent</item>
     </style>
+
     <style name="ThemeOverlay_Toolbar_Transparent">
         <item name="colorPrimary">@color/transparent</item>
         <item name="colorOnPrimary">@color/black</item>
     </style>
 
     //white
+
     <style name="Style_Toolbar_White" parent="Widget.MaterialComponents.Toolbar.Primary">
         <item name="materialThemeOverlay">@style/ThemeOverlay_Toolbar_White</item>
         <item name="titleTextAppearance">@style/TextAppearance_Title_Toolbar</item>
     </style>
+
     <style name="ThemeOverlay_Toolbar_White">
         <item name="colorPrimary">@color/white</item>
         <item name="colorOnPrimary">@color/black</item>
     </style>
 
     //bottom sheet toolbar
+
     <style name="Style_BottomSheet_toolbar" parent="Style_Toolbar_White">
         <item name="titleTextColor">@color/black_600</item>
     </style>
@@ -41,6 +48,7 @@
     <style name="Style_App_AppBarLayout_Transparent" parent="Widget.MaterialComponents.AppBarLayout.Primary">
         <item name="materialThemeOverlay">@style/ThemeOverlay_AppBarLayout_Transparent</item>
     </style>
+
     <style name="ThemeOverlay_AppBarLayout_Transparent">
         <item name="colorPrimary">@color/transparent</item>
         <item name="colorOnPrimary">@color/black</item>
@@ -56,20 +64,29 @@
 
 
     <!-- bottom sheet -->
-    <style name="Style_BottomSheet_Modal_Standard" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog" ></style>
+    <style name="Style_BottomSheet_Modal_Standard" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog"></style>
 
     <style name="Style_BottomSheet_Modal_Choices" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/ThemeOverlay_BottomSheet_Modal_Choices</item>
     </style>
-
     <style name="ThemeOverlay_BottomSheet_Modal_Choices" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <item name="shapeAppearance">@style/ShapeAppearance.bottomSheet</item>
     </style>
 
+    <!--Card View -->
+
+    <style name="Style_CardView_Standard" parent="Widget.MaterialComponents.CardView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Card</item>
+        <item name="shapeAppearance">@style/ShapeAppearance_CardView</item>
+    </style>
+    <style name="ThemeOverlay.App.Card" parent="">
+        <!--override theme attribute-->
+    </style>
 
     <!--text input layout-->
 
     //date picker
+
     <style name="Style_TextInputLayout_DateInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"></style>
 
 
