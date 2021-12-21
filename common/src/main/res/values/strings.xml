@@ -16,6 +16,7 @@
     <string name="edit">Edit</string>
     <string name="share">Share</string>
     <string name="copy">Copy</string>
+    <string name="title_share_with">Share With</string>
 
     <!-- -->
     <string name="msg_save_image">Image Saved Successfully.</string>

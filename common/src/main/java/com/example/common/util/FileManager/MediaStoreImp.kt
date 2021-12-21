@@ -17,7 +17,7 @@ class MediaStoreImp(var context: Context) : MediaStore {
             put(android.provider.MediaStore.Images.Media.DISPLAY_NAME, fileName)
             put(
                 android.provider.MediaStore.Images.Media.MIME_TYPE,
-                getMimeType(Format.Image(format))
+                getMimeType(Image(format))
             )
         }
         val table = if (isDeviceSDKGreaterThan(29))

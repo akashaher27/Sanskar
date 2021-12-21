@@ -10,13 +10,13 @@ import com.example.common.util.FileManager.*
 
 fun getMimeType(format: Format): String {
     return when (format) {
-        is Format.Image -> {
+        is Image -> {
             when (format.format) {
                 ImageFormat.JPEG -> MIME_TYPE_JPG
                 ImageFormat.PNG -> MIME_TYPE_PNG
             }
         }
-        is Format.Document -> {
+        is Document -> {
             when (format.format) {
                 DocFormat.PDF -> MIME_TYPE_PDF
                 DocFormat.TEXT -> MIME_TYPE_TEXT

@@ -17,25 +17,24 @@ const val EXT_PNG = ".png"
 const val EXT_PDF = ".pdf"
 
 
-
 enum class ImageFormat {
     PNG, JPEG
 }
 enum class DocFormat {
-    PDF,TEXT
+    PDF, TEXT
 }
 
-sealed class Format {
-    data class Image(
-        var format: ImageFormat
-    ): Format()
-    data class Document(
-        var format: DocFormat
-    ): Format()
-}
+sealed class Format()
+data class Image(
+    var format: ImageFormat
+) : Format()
+data class Document(
+    var format: DocFormat
+) : Format()
+
 
 enum class FileType {
-    IMAGE, AUDIO, VIDEO,DOC
+    IMAGE, AUDIO, VIDEO, DOC
 }
 
 enum class StorageType {

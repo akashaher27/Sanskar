@@ -3,10 +3,12 @@ package com.example.common.util
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.provider.OpenableColumns
 import androidx.core.content.FileProvider
+import com.example.common.R
 import com.example.common.model.FileDetail
 import java.io.File
 
@@ -20,7 +22,20 @@ fun getTempFileUri(context: Context): Uri? {
     return try {
         FileProvider.getUriForFile(
             context.applicationContext,
-            "com.example.testproject.provider",
+            "com.example.sanskar.provider",
+            tempFile
+        )
+    } catch (e: Exception) {
+        null
+    }
+}
+
+fun getTempFileUri(context: Context, suffix: String): Uri? {
+    val tempFile = File.createTempFile("temp", suffix, context.cacheDir)
+    return try {
+        FileProvider.getUriForFile(
+            context.applicationContext,
+            "com.example.sanskar.provider",
             tempFile
         )
     } catch (e: Exception) {
@@ -58,3 +73,15 @@ fun Context.copyTextToClipboard(title: String, value: String): Boolean {
 }
 
 fun isDeviceSDKGreaterThan(sdkInt: Int): Boolean = Build.VERSION.SDK_INT > sdkInt
+
+fun Context.showIntentChooser(chooserIntent: Intent) {
+    val info = this.packageManager.queryIntentActivities(chooserIntent, 0)
+    if (info.isNotEmpty()) {
+        startActivity(
+            Intent.createChooser(
+                chooserIntent,
+                this.getString(R.string.title_share_with)
+            )
+        )
+    }
+}
