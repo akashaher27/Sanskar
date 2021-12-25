@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="background">
+        <item>@drawable/bg_blood_pressure</item>
+        <item>@drawable/bg_fresh_and_si</item>
+        <item>@drawable/bg_blood_pressure</item>
+        <item>@drawable/bg_melo_taobao</item>
+        <item>@drawable/bg_blood_pressure</item>
+        <item>@drawable/bg_blood_pressure</item>
+        <item>@drawable/bg_blood_pressure</item>
+        <item>@drawable/bg_blood_pressure</item>
+        <item>@drawable/bg_blood_pressure</item>
+    </integer-array>
+</resources>

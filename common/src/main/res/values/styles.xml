@@ -64,11 +64,10 @@
 
 
     <!-- bottom sheet -->
-    <style name="Style_BottomSheet_Modal_Standard" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog"></style>
-
     <style name="Style_BottomSheet_Modal_Choices" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/ThemeOverlay_BottomSheet_Modal_Choices</item>
     </style>
+
     <style name="ThemeOverlay_BottomSheet_Modal_Choices" parent="Widget.MaterialComponents.BottomSheet.Modal">
         <item name="shapeAppearance">@style/ShapeAppearance.bottomSheet</item>
     </style>
@@ -79,6 +78,7 @@
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.Card</item>
         <item name="shapeAppearance">@style/ShapeAppearance_CardView</item>
     </style>
+
     <style name="ThemeOverlay.App.Card" parent="">
         <!--override theme attribute-->
     </style>
@@ -87,8 +87,7 @@
 
     //date picker
 
-    <style name="Style_TextInputLayout_DateInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"></style>
-
+    <style name="Style_TextInputLayout_DateInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
 </resources>
 

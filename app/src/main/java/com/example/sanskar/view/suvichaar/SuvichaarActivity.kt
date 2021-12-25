@@ -1,33 +1,18 @@
 package com.example.sanskar.view.suvichaar
 
-import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.example.common.view.bottmoSheet.Option
 import com.example.sanskar.R
 import com.example.sanskar.databinding.ActivitySuvichaarBinding
 import com.example.sanskar.view.PostLoginActivity
-import android.graphics.drawable.Drawable
 
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.Color
-import android.net.Uri
-import android.os.Environment
-import android.provider.MediaStore
-import android.util.Log
-import android.widget.Toast
-import androidx.core.content.FileProvider
-import androidx.core.view.get
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.common.util.*
 import com.example.common.util.FileManager.*
-import java.io.File
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.IOException
-import java.net.URI
+import com.example.sanskar.view.suvichaar.adapter.*
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 
 class SuvichaarActivity() : PostLoginActivity() {
@@ -36,6 +21,7 @@ class SuvichaarActivity() : PostLoginActivity() {
         FileManagerImp(this)
     }
     private var binding: ActivitySuvichaarBinding? = null
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +32,51 @@ class SuvichaarActivity() : PostLoginActivity() {
     private fun initialiseView() {
         binding = ActivitySuvichaarBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+        initBottomSheet()
+        initEditChoices()
+    }
+
+    private fun initEditChoices() {
+        binding?.rvChoices?.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+
+        val list = mutableListOf<ViewItem>()
+        list.add(TitleModel("Background"))
+        val backgroundHolder = mutableListOf<BackgroundModel>()
+        val v = resources.obtainTypedArray(R.array.background)
+        for (i in 0 until v.length()) {
+            val id: Int = v.getResourceId(i, -1)
+            backgroundHolder.add(BackgroundModel(id))
+        }
+        list.add(BackgroundHolderModel(backgroundHolder))
+        val adapter = SuvichaarEditChoiceAdapter(list)
+        adapter.setEditChoiceItemClickListener(object : SuvichaarEditChoiceAdapter.EditChoiceItemClickListener{
+            override fun onClickBackground(backgroundModel: BackgroundModel?) {
+                binding?.background?.updateBackground(backgroundModel?.backgroundId)
+            }
+
+            override fun onClickFont(fontModel: FontModel?) {
+
+            }
+
+        })
+        binding?.rvChoices?.adapter = adapter
+    }
+
+    private fun initBottomSheet() {
+        bottomSheetBehavior = BottomSheetBehavior.from(binding?.bottomSheet!!)
+        bottomSheetBehavior.isHideable = true
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+        bottomSheetBehavior.addBottomSheetCallback(object :
+            BottomSheetBehavior.BottomSheetCallback() {
+            override fun onStateChanged(bottomSheet: View, newState: Int) {}
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                binding?.constraintLayout?.progress = slideOffset + 1
+            }
+        })
+
     }
 
     private fun resetViewToInitialState() {
@@ -59,7 +90,9 @@ class SuvichaarActivity() : PostLoginActivity() {
         binding?.copy?.setOnClickListener {
             copySuvichaar()
         }
-        binding?.edit?.setOnClickListener { }
+        binding?.edit?.setOnClickListener {
+            bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
         binding?.share?.setOnClickListener {
             showShareOption()
         }
@@ -102,7 +135,7 @@ class SuvichaarActivity() : PostLoginActivity() {
             action = Intent.ACTION_SEND
             type = getMimeType(Image(ImageFormat.JPEG))
             putExtra(Intent.EXTRA_STREAM, uri)
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
         showIntentChooser(intent)
     }
