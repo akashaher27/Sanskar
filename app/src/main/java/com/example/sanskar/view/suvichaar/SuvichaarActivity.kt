@@ -40,24 +40,63 @@ class SuvichaarActivity() : PostLoginActivity() {
         binding?.rvChoices?.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-
         val list = mutableListOf<ViewItem>()
-        list.add(TitleModel("Background"))
+        list.add(TitleModel(getString(R.string.title_background)))
         val backgroundHolder = mutableListOf<BackgroundModel>()
-        val v = resources.obtainTypedArray(R.array.background)
-        for (i in 0 until v.length()) {
-            val id: Int = v.getResourceId(i, -1)
+        val backgroundList = resources.obtainTypedArray(R.array.background)
+        for (i in 0 until backgroundList.length()) {
+            val id: Int = backgroundList.getResourceId(i, -1)
             backgroundHolder.add(BackgroundModel(id))
         }
+        backgroundList.recycle()
         list.add(BackgroundHolderModel(backgroundHolder))
+
+        list.add(TitleModel(getString(R.string.title_font)))
+        val fontHolder = mutableListOf<FontModel>()
+        val p = mutableListOf(
+            Font.FONT_TWINK,
+            Font.FONT_PACIF,
+            Font.FONT_SHIZU,
+            Font.FONT_MOOL,
+            Font.FONT_INDIE,
+            Font.FONT_FUZZY,
+            Font.FONT_BABY
+        )
+        p.forEach {
+            fontHolder.add(FontModel(it))
+        }
+        list.add(FontHolderModel(fontHolder))
         val adapter = SuvichaarEditChoiceAdapter(list)
-        adapter.setEditChoiceItemClickListener(object : SuvichaarEditChoiceAdapter.EditChoiceItemClickListener{
+        adapter.setEditChoiceItemClickListener(object :
+            SuvichaarEditChoiceAdapter.EditChoiceItemClickListener {
             override fun onClickBackground(backgroundModel: BackgroundModel?) {
                 binding?.background?.updateBackground(backgroundModel?.backgroundId)
             }
 
             override fun onClickFont(fontModel: FontModel?) {
-
+                when(fontModel?.font){
+                    Font.FONT_BABY ->{
+                        binding?.background?.changeFont(R.style.TextAppearance_Ooohbabyregular)
+                    }
+                    Font.FONT_FUZZY ->{
+                        binding?.background?.changeFont(R.style.TextAppearance_Fuzzybubblesregular)
+                    }
+                    Font.FONT_INDIE ->{
+                        binding?.background?.changeFont(R.style.TextAppearance_Indieflowerregular)
+                    }
+                    Font.FONT_MOOL ->{
+                        binding?.background?.changeFont(R.style.TextAppearance_Moolahlahregular)
+                    }
+                    Font.FONT_SHIZU ->{
+                        binding?.background?.changeFont(R.style.TextAppearance_Shizurueegular)
+                    }
+                    Font.FONT_PACIF->{
+                        binding?.background?.changeFont(R.style.TextAppearance_Pacificoregular)
+                    }
+                    Font.FONT_TWINK ->{
+                        binding?.background?.changeFont(R.style.TextAppearance_twinklestarregular)
+                    }
+                }
             }
 
         })

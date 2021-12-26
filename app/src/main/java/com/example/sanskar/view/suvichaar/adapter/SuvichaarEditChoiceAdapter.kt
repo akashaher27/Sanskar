@@ -34,20 +34,20 @@ class SuvichaarEditChoiceAdapter(itemList: MutableList<ViewItem>) :
             ViewType.VIEW_BACKGROUND -> {
                 return SuvichaarEditChoiceViewHolder(
                     LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_suvichaar_background_holder, parent, false), this
+                        .inflate(R.layout.item_suvichaar_edit_choices_holder, parent, false), this
                 )
 
             }
             ViewType.VIEW_FONT -> {
                 return SuvichaarEditChoiceViewHolder(
                     LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_suvichaar_background, parent, false), this
+                        .inflate(R.layout.item_suvichaar_edit_choices_holder, parent, false), this
                 )
             }
             else -> {
                 return SuvichaarEditChoiceViewHolder(
                     LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_suvichaar_background, parent, false), this
+                        .inflate(R.layout.item_suvichaar_edit_choices_holder, parent, false), this
                 )
             }
         }
@@ -69,7 +69,7 @@ class SuvichaarEditChoiceAdapter(itemList: MutableList<ViewItem>) :
         BaseViewHolder<ViewItem>(view, adapter) {
 
         private val title: TextView? = view.findViewById(R.id.tvTitle)
-        private val rvBackgroundHolder: RecyclerView? = view.findViewById(R.id.rvBackgroundHolder)
+        private val rvChoiceHolder: RecyclerView? = view.findViewById(R.id.rvChoiceHolder)
         override fun bindData(item: ViewItem) {
             when (item.viewType) {
                 ViewType.VIEW_TITLE -> {
@@ -78,15 +78,25 @@ class SuvichaarEditChoiceAdapter(itemList: MutableList<ViewItem>) :
                 }
                 ViewType.VIEW_BACKGROUND -> {
                     val viewBackground = item as BackgroundHolderModel
-                    rvBackgroundHolder?.layoutManager =
+                    rvChoiceHolder?.layoutManager =
                         LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
                     val adapter = SuvichaarBackgroundAdapter(viewBackground.backgroundHolder)
                     adapter.setItemClickListener { parent, view, position ->
                         itemClickHandler?.onClickBackground(adapter.getItemAt(position))
                     }
-                    rvBackgroundHolder?.adapter = adapter
+                    rvChoiceHolder?.adapter = adapter
                 }
-                ViewType.VIEW_FONT -> { }
+                ViewType.VIEW_FONT -> {
+                    val viewFont = item as FontHolderModel
+                    rvChoiceHolder?.layoutManager =
+                        LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
+                    val adapter = SuvichaarFontAdapter(viewFont.fontHolder)
+                    adapter.setItemClickListener { parent, view, position ->
+                        itemClickHandler?.onClickFont(adapter.getItemAt(position))
+                    }
+                    rvChoiceHolder?.adapter = adapter
+
+                }
             }
         }
     }
@@ -113,8 +123,18 @@ data class FontHolderModel(
 ) : ViewItem(viewType)
 
 data class FontModel(
-    var font: String,
-)
+    var font: Font
+) : Item()
+
+enum class Font {
+    FONT_FUZZY,
+    FONT_INDIE,
+    FONT_MOOL,
+    FONT_BABY,
+    FONT_PACIF,
+    FONT_SHIZU,
+    FONT_TWINK,
+}
 
 data class TitleModel(
     var title: String,

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">BaseProject</string>
+    <string name="hello">Hello</string>
 
     <!-- form -->
     <string name="title_toolbar">Form</string>
@@ -18,11 +19,14 @@
     <string name="copy">Copy</string>
     <string name="title_share_with">Share With</string>
 
-    <!-- -->
+    <!-- user msg-->
     <string name="msg_save_image">Image Saved Successfully.</string>
     <string name="msg_copy_image">Image copied Successfully.</string>
 
     <!--bottom sheet title-->
     <string name="bottomSheet_title_upload">Upload</string>
+
+    <!-- static test string -->
+    <string name="test">Hello,How are you..,Good to see you..Have a Nice Day.Hello,How are you..,Good to see you..Have a Nice Day.</string>
 
 </resources>

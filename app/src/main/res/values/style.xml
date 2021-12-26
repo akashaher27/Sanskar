@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_1">
+        <item name="android:fontFamily">font/twinklestarregular</item>
+    </style>
+</resources>

@@ -11,6 +11,7 @@ import androidx.core.content.res.ResourcesCompat
 import com.example.common.R
 import com.example.common.databinding.ViewBackgroundSheetBinding
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.resources.TextAppearance
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.ShapeAppearanceModel
 import java.util.jar.Attributes
@@ -54,6 +55,10 @@ class BackGroundSheet(context: Context, attributes: AttributeSet) :
         drawable?.let {
             binding?.clBackground?.background = ResourcesCompat.getDrawable(resources, it, null)
         }
+    }
+
+    fun changeFont(textAppearance: Int) {
+        binding?.tvTitle?.setTextAppearance(textAppearance)
     }
 
 }
