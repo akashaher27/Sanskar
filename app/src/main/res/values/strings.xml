@@ -3,4 +3,5 @@
 
     <!-- title String -->
     <string name="title_background">Background</string>
+    <string name="title_font">Font</string>
 </resources>
