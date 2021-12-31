@@ -28,5 +28,6 @@
 
     <!-- static test string -->
     <string name="test">Hello,How are you..,Good to see you..Have a Nice Day.Hello,How are you..,Good to see you..Have a Nice Day.</string>
+    <string name="test_mr">तुमच्या आजाराबद्दल सविस्तर माहिती द्या, उ.दा. मला 2 दिवसांपासून खूप ताप येत आहे, मी डोलो-650  घेतली पण फरक पडला नाही. कृपया यासाठी लागणाऱ्या तपासण्या सुचवा</string>
 
 </resources>

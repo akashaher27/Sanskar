@@ -74,26 +74,26 @@ class SuvichaarActivity() : PostLoginActivity() {
             }
 
             override fun onClickFont(fontModel: FontModel?) {
-                when(fontModel?.font){
-                    Font.FONT_BABY ->{
+                when (fontModel?.font) {
+                    Font.FONT_BABY -> {
                         binding?.background?.changeFont(R.style.TextAppearance_Ooohbabyregular)
                     }
-                    Font.FONT_FUZZY ->{
+                    Font.FONT_FUZZY -> {
                         binding?.background?.changeFont(R.style.TextAppearance_Fuzzybubblesregular)
                     }
-                    Font.FONT_INDIE ->{
+                    Font.FONT_INDIE -> {
                         binding?.background?.changeFont(R.style.TextAppearance_Indieflowerregular)
                     }
-                    Font.FONT_MOOL ->{
+                    Font.FONT_MOOL -> {
                         binding?.background?.changeFont(R.style.TextAppearance_Moolahlahregular)
                     }
-                    Font.FONT_SHIZU ->{
+                    Font.FONT_SHIZU -> {
                         binding?.background?.changeFont(R.style.TextAppearance_Shizurueegular)
                     }
-                    Font.FONT_PACIF->{
+                    Font.FONT_PACIF -> {
                         binding?.background?.changeFont(R.style.TextAppearance_Pacificoregular)
                     }
-                    Font.FONT_TWINK ->{
+                    Font.FONT_TWINK -> {
                         binding?.background?.changeFont(R.style.TextAppearance_twinklestarregular)
                     }
                 }

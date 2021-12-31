@@ -23,7 +23,6 @@ class BackGroundSheet(context: Context, attributes: AttributeSet) :
 
     init {
         initialiseView()
-        populateView()
     }
 
     private fun initialiseView() {
@@ -39,13 +38,6 @@ class BackGroundSheet(context: Context, attributes: AttributeSet) :
         shapeAppearanceModel = shapeModel
     }
 
-    private fun populateView() {
-        changeBackgroundView()
-    }
-
-    private fun changeBackgroundView() {
-
-    }
 
     fun getTitle(): String {
         return binding?.tvTitle?.text.toString()

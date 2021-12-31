@@ -22,19 +22,19 @@
 
 
     //bottomSheet
-    <style name="ShapeAppearance.bottomSheet" parent="ShapeAppearance.App.LargeComponent"></style>
+    <style name="ShapeAppearance.bottomSheet" parent="ShapeAppearance.App.LargeComponent"/>
 
     //Date Picker
-    <style name="ShapeAppearance_DatePicker" parent="ShapeAppearance.App.MediumComponent"></style>
+    <style name="ShapeAppearance_DatePicker" parent="ShapeAppearance.App.MediumComponent"/>
 
     //Card view
-    <style name="ShapeAppearance_CardView" parent="ShapeAppearance.App.MediumComponent"></style>
+    <style name="ShapeAppearance_CardView" parent="ShapeAppearance.App.MediumComponent"/>
 
 
     //option shape
     <style name="ShapeAppearance_Outline_Box" >
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">5dp</item>
+        <item name="cornerSize">10dp</item>
     </style>
 
     <style name="ShapeAppearance_Circle" >

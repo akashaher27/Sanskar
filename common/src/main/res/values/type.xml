@@ -26,7 +26,7 @@
 
 
     <!--toolbar-->
-    <style name="TextAppearance_Subtitle_Toolbar" parent="TextAppearance_Subtitle"/>
+    <style name="TextAppearance_Subtitle_Toolbar" parent="TextAppearance_Subtitle" />
 
 
     <!--bottom sheet-->
@@ -41,26 +41,32 @@
         <item name="android:textSize">@dimen/size_toolbar_title</item>
         <item name="android:letterSpacing">0.15</item>
     </style>
+
     <style name="TextAppearance_Fuzzybubblesregular">
         <item name="fontFamily">@font/fuzzybubblesregular</item>
         <item name="android:textSize">@dimen/size_toolbar_title</item>
     </style>
+
     <style name="TextAppearance_Indieflowerregular">
         <item name="fontFamily">@font/indieflowerregular</item>
         <item name="android:textSize">@dimen/size_toolbar_title</item>
     </style>
+
     <style name="TextAppearance_Ooohbabyregular">
         <item name="fontFamily">@font/ooohbabyregular</item>
         <item name="android:textSize">@dimen/size_toolbar_title</item>
     </style>
+
     <style name="TextAppearance_Pacificoregular">
         <item name="fontFamily">@font/pacificoregular</item>
         <item name="android:textSize">@dimen/size_toolbar_title</item>
     </style>
+
     <style name="TextAppearance_Shizurueegular">
         <item name="fontFamily">@font/shizurueegular</item>
         <item name="android:textSize">@dimen/size_toolbar_title</item>
     </style>
+
     <style name="TextAppearance_twinklestarregular">
         <item name="fontFamily">@font/twinklestarregular</item>
         <item name="android:textSize">@dimen/size_toolbar_title</item>

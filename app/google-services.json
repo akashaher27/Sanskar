@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "254378833705",
+    "project_id": "sanskar-3902d",
+    "storage_bucket": "sanskar-3902d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254378833705:android:009ffa5805400803ed2938",
+        "android_client_info": {
+          "package_name": "com.example.sanskar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254378833705-ohu4ak5a0u9gubhv2km5fhvqofgdn5cl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanskar",
+            "certificate_hash": "e4c052b59de94dc662f7b8a6528588ab1ecd403b"
+          }
+        },
+        {
+          "client_id": "254378833705-tujljg401ho9anatrlq8dpo0c82lufgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCurDh9ULrUfULl2n6LSomOzsP49q2yt7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254378833705-tujljg401ho9anatrlq8dpo0c82lufgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
