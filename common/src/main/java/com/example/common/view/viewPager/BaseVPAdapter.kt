@@ -1,4 +1,4 @@
-package com.example.common.view.recyclerview
+package com.example.common.view.viewPager
 
 import android.view.View
 import android.view.ViewGroup
@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 /**
  * Created by akash on 14,01,2021
  */
-abstract class BaseAdapter<T : Item>(list: List<T>) : RecyclerView.Adapter<BaseViewHolder<T>>() {
+abstract class BaseVPAdapter<T : VPItem>(list: MutableList<T>) : RecyclerView.Adapter<BaseVPViewHolder<T>>() {
 
-    protected var baseList: MutableList<T> = list.toMutableList()
+    protected var baseList: MutableList<T> = list
     private var listener: OnRecyclerViewOnItemClickListener? = null
 
-    abstract override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<T>
+    abstract override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseVPViewHolder<T>
 
-    abstract override fun onBindViewHolder(holder: BaseViewHolder<T>, position: Int)
+    abstract override fun onBindViewHolder(holder: BaseVPViewHolder<T>, position: Int)
 
     override fun getItemCount(): Int {
         return baseList.size
@@ -49,7 +49,7 @@ abstract class BaseAdapter<T : Item>(list: List<T>) : RecyclerView.Adapter<BaseV
         notifyDataSetChanged()
     }
 
-    fun setItemClickListener(listener: OnRecyclerViewOnItemClickListener) {
+    fun setItemClickListener(listener:OnRecyclerViewOnItemClickListener) {
         this.listener = listener
     }
 
