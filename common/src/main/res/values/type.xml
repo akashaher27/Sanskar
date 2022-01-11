@@ -72,4 +72,9 @@
         <item name="android:textSize">@dimen/size_toolbar_title</item>
     </style>
 
+    <style name="TextAppearance_amitaregular">
+        <item name="fontFamily">@font/amitaregular</item>
+        <item name="android:textSize">@dimen/size_toolbar_title</item>
+    </style>
+
 </resources>

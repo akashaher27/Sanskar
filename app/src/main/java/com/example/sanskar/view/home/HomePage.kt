@@ -49,6 +49,28 @@ class HomePage() : PostLoginActivity() {
                     ChoiceModel("HELLO"),
                     ChoiceModel("HELLO")
                 )
+            ),
+            TitleModel("Suvichaar", ViewType.VIEW_TITLE),
+            FeatureModel(
+                ViewType.VIEW_FEATURE,
+                mutableListOf(
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO")
+                )
+            ),
+            TitleModel("Suvichaar", ViewType.VIEW_TITLE),
+            FeatureModel(
+                ViewType.VIEW_FEATURE,
+                mutableListOf(
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO"),
+                    ChoiceModel("HELLO")
+                )
             )
         )
         val adapter1 = FeaturesRvAdapter(list)
